@@ -10,8 +10,8 @@
   - Task 3
   - Task 4
 
-[x] Assignment-1
-[x] Assignment-2
-[x] Assignment-3
-[ ] Assignment-4
-[x] Assignment-5
+- [x] Assignment-1
+- [x] Assignment-2
+- [x] Assignment-3
+- [ ] Assignment-4
+- [x] Assignment-5
