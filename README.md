@@ -5,7 +5,7 @@
 ### Assignments
 - SQL Files:
   - Creation of databases and Tables
-  - Task 1
+  - Insertion of Tables
   - Task 2
   - Task 3
   - Task 4
