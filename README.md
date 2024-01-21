@@ -12,8 +12,8 @@
 - Assignment PDFs
 
 ### Assignments Checklist :
-- [x] Assignment-1
-- [x] Assignment-2
-- [x] Assignment-3
-- [ ] Assignment-4
-- [x] Assignment-5
+<span style="color:blue;">- [x] Assignment-1</span>
+<span style="color:blue;">- [x] Assignment-2</span>
+<span style="color:blue;">- [x] Assignment-3</span>
+<span style="color:gray;">- [ ] Assignment-4</span>
+<span style="color:blue;">- [x] Assignment-5</span>
