@@ -12,8 +12,8 @@
 - Assignment PDFs
 
 ### Assignments Checklist :
-- [x]  :heavy_check_mark:  Assignment-1
-- [x]  :heavy_check_mark:  Assignment-2
-- [x]  :heavy_check_mark:  Assignment-3
-- [ ]  :white_large_square: Assignment-4
-- [x]  :heavy_check_mark:  Assignment-5
+- :heavy_check_mark:  Assignment-1
+- :heavy_check_mark:  Assignment-2
+- :heavy_check_mark:  Assignment-3
+- :white_large_square: Assignment-4
+- :heavy_check_mark:  Assignment-5
