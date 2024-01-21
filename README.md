@@ -12,8 +12,8 @@
 - Assignment PDFs
 
 ### Assignments Checklist :
-- [x] <span style="color:blue;"> Assignment-1</span>
-- [x] <span style="color:blue;"> Assignment-2</span>
-- [x] <span style="color:blue;"> Assignment-3</span>
-- [ ] <span style="color:gray;"> Assignment-4</span>
-- [x] <span style="color:blue;"> Assignment-5</span>
+- [x]  :heavy_check_mark:  Assignment-1
+- [x]  :heavy_check_mark:  Assignment-2
+- [x]  :heavy_check_mark:  Assignment-3
+- [ ]  :white_large_square: Assignment-4
+- [x]  :heavy_check_mark:  Assignment-5
