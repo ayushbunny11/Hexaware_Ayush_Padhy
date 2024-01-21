@@ -2,8 +2,6 @@
 
 ## Name : Ayush Padhy
 
-## Assignments
-
 ### Assignment Contents :
 - SQL Files:
   - Creation of databases and Tables
