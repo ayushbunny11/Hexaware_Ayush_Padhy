@@ -116,19 +116,6 @@ select *
 from crime
 where IncidentType in ('Homicide', 'Robbery'); 
 
-SELECT *
-FROM crime c
-WHERE EXISTS (
-    SELECT 1
-    FROM crime h
-    WHERE c.CrimeID = h.CrimeID AND h.IncidentType = 'Homicide'
-)
-OR NOT EXISTS (
-    SELECT 1
-    FROM crime r
-    WHERE c.CrimeID = r.CrimeID AND r.IncidentType <> 'Robbery'
-);
-
 -- Retrieve a list of all incidents and the associated suspects, 
 -- showing suspects for each incident, or 'No Suspect' if there are none. 
 select c.*, coalesce(s.s_name, 'No Suspect') as `Suspect Name`
