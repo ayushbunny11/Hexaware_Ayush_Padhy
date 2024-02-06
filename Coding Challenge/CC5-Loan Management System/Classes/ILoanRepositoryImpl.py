@@ -1,9 +1,10 @@
 from Loan import Loan
 from HomeLoan import HomeLoan
 from CarLoan import CarLoan
+from ILoanRepository import ILoanRepository
 
 
-class ILoanRepositoryImpl:
+class ILoanRepositoryImpl(ILoanRepository):
     def __init__(self, dbUtil):
         self.dbUtil = dbUtil
 
@@ -89,10 +90,10 @@ class ILoanRepositoryImpl:
         emi_amt = self.calculateEMI(loanID)
         loanStatus = self.getLoanStatus(loanID)
         if loanStatus == "Approved":
-            if amount<emi_amt:
+            if amount < emi_amt:
                 return f"Payment Rejected!!! Insufficient Amount as per the EMI. Your EMI amount: {emi_amt}"
             else:
-                emiCount = amount//emi_amt
+                emiCount = amount // emi_amt
                 balance = float(self.getPrincipalAmount(loanID)) - float(amount)
                 query = "Update loan set principalAmount = %s where loanID=%s"
                 values = (balance, loanID)
