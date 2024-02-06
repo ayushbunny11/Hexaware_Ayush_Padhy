@@ -1,6 +1,6 @@
-from Loan import Loan
-from HomeLoan import HomeLoan
-from CarLoan import CarLoan
+from entity.Loan import Loan
+from entity.HomeLoan import HomeLoan
+from entity.CarLoan import CarLoan
 from ILoanRepository import ILoanRepository
 
 

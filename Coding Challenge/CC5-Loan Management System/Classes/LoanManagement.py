@@ -1,5 +1,5 @@
-from DBUtil import DBUtil
-from ILoanRepositoryImpl import ILoanRepositoryImpl
+from util.DBUtil import DBUtil
+from dao.ILoanRepositoryImpl import ILoanRepositoryImpl
 
 
 class LoanManagement:
