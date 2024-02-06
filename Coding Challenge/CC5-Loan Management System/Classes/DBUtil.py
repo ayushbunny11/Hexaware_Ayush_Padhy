@@ -20,7 +20,7 @@ class DBUtil:
             print(f"Query Execution Error! {e}")
             self.connection.rollback()
 
-    def fetchall(self, query, values=None):
+    def fetchAll(self, query, values=None):
         try:
             self.cursor.execute(query, values)
             return self.cursor.fetchall()

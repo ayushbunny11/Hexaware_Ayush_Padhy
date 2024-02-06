@@ -4,7 +4,7 @@ from ILoanRepositoryImpl import ILoanRepositoryImpl
 
 class LoanManagement:
     def main(self):
-        dbUtil = DBUtil(host='localhost', user='root', password='SQL@bunn11', port=3306, database='lmsystem')
+        dbUtil = DBUtil(host='localhost', user='root', password='SQL@bunny11', port=3306, database='lmsystem')
         lrs = ILoanRepositoryImpl(dbUtil)
 
         print("Welcome to the LOAN MANAGEMENT APP.")
@@ -15,8 +15,9 @@ class LoanManagement:
             print("3. Get Your Loan")
             print("4. Repay Your Loan")
             print("5. Check Your Loan Status")
-            print("6. Calculate the Interest on your Loan")
-            print("7. Exit")
+            print("6. Update Your Loan Status")
+            print("7. Calculate the Interest on your Loan")
+            print("8. Exit")
             ch = int(input("Enter your choice: "))
             if ch == 1:
                 result = lrs.applyLoan()
@@ -39,8 +40,11 @@ class LoanManagement:
                 print(lrs.loanRepayment(loanID, amount))
             elif ch == 5:
                 loanID = int(input("Enter your loan ID: "))
-                print(lrs.loanStatus(loanID))
+                print(lrs.getLoanStatus(loanID))
             elif ch == 6:
+                loanID = int(input("Enter your loan ID: "))
+                print(lrs.loanStatus(loanID))
+            elif ch == 7:
                 loanID = int(input("Enter your loan ID: "))
                 print(lrs.calculateInterest(loanID))
             else:
