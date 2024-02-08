@@ -31,12 +31,16 @@ class EmployeeServiceImpl(IEmployeeService):
             'position': input("Enter your position: "),
             'joiningDate': datetime.now().strftime("%Y-%m-%d")
         }
+        if not self.checkEmployeeDataValidation(employee):
+            raise Exception("InvalidDataFound")
+
         if not (self.checkEmailID(employee['email'])):
             raise Exception("EmailID exists!!!")
         if not (self.checkPhoneNumber(employee['phone'])):
             raise Exception("Phone Number exists!!!")
 
-        query = "insert into employee(EmployeeID, FirstName, LastName, DateOfBirth, Gender, Email, PhoneNumber, Address, Position, JoiningDate) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        query = ("insert into employee(EmployeeID, FirstName, LastName, DateOfBirth, Gender, Email, PhoneNumber, "
+                 "Address, Position, JoiningDate) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         values = (employee['empID'], employee['firstName'], employee['lastName'], employee['dob'], employee['gender'],
                   employee['email'], employee['phone'], employee['address'], employee['position'],
                   employee['joiningDate'])
@@ -121,3 +125,23 @@ class EmployeeServiceImpl(IEmployeeService):
             return True
         else:
             return False
+
+    def checkEmployeeDataValidation(self, employee):
+        if self.GetEmployeeByID(employee['empID']) is None:
+            return False
+
+        if not employee['firstName'] or not employee['lastName'] or not employee['dob'] or not employee['gender'] or not employee['email'] or not employee['phone'] or not employee['address'] or not employee['position']:
+            print("Error: All fields must be filled.")
+            return False
+
+        try:
+            datetime.strptime(employee['dob'], "%Y-%m-%d")
+        except ValueError:
+            print("Error: Invalid date format. Please use YYYY-MM-DD.")
+            return False
+
+        if employee['gender'].lower() not in ['male', 'female']:
+            print("Error: Gender must be either 'Male' or 'Female'.")
+            return False
+
+        return True

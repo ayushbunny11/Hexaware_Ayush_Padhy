@@ -55,3 +55,12 @@ class PayrollServiceImpl(IPayrollService):
         values = (empID,)
         result = self.dbUtil.fetchOne(query, values)
         return result[0]
+
+    def getTaxAmountForEmployee(self, employeeID, taxYear):
+        query = "select TaxAmount from tax where EmployeeID=%s and TaxYear =%s"
+        values = (employeeID, taxYear)
+        result = self.dbUtil.fetchOne(query, values)
+        if result is not None:
+            return result[0]
+        else:
+            raise Exception("No data found!")
