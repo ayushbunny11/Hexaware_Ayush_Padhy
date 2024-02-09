@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class IPayrollService(ABC):
 
     @abstractmethod
-    def GeneratePayroll(self, employeeID, startDate, endDate):
+    def GeneratePayroll(self, employeeID):
         pass
 
     @abstractmethod
